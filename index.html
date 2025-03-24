@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ワンピース - One Piece Unofficial Website</title>
+    <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
+    <link rel="stylesheet" href="css/all-style.css">
+    <link rel="stylesheet" href="css/index-style.css">
+    <link rel="icon" href="img/favicon.ico">
+</head>
+
+<body id="index">
+    <header>
+        <div class="he">
+            <img src="img/logo-removebg-preview.png" alt="タイトル" class="logo">
+            <nav>
+                <ul>
+                    <li class="home"><a href="#">HOME</a></li>
+                    <li class="story"><a href="story.html">STORY</a></li>
+                    <li class="character"><a href="character.html">CHARACTER</a></li>
+                </ul>
+            </nav>
+            <a href="https://www.youtube.com/c/OnePieceOfficial" target="_blank" class="youtube">
+                <img class="tube" src="img/youtube-logo.png" alt="YouTube"></a>
+            <a href="https://twitter.com/OnePiece_staff" target="_blank" class="xtw">
+                <img class="tui" src="img/twitter-logo.png" alt="Twitter"></a>
+        </div>
+    </header>
+
+    <div class="audio_wrap">
+        <button id="toggle-btn"></button> <!-- 再生・停止ボタン -->
+        <audio id="audio" src="onepiece_theme_song.mp3" loop></audio> <!-- 音楽ファイル -->
+    </div>
+
+    <main>
+        <div class="tate">
+            <p class="zaihou">俺の財宝か<br>欲しけりゃくれてやる…</p>
+            <p class="subete">探せ<br>この世のすべてを<br>そこに置いてきた</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="foot">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="story.html">STORY</a></li>
+                <li><a href="character.html">CHARACTER</a></li>
+                <li><a href="manga.html">MANGA</a></li>
+            </ul>  
+        </div>
+        <div class="mangapro">
+            <p class="con">©Eiichiro Oda / SHUEISHA, TOEI ANIMATION All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        var toggleBtn = document.getElementById("toggle-btn");
+        var audio = document.getElementById("audio");
+        toggleBtn.addEventListener("click", function () {
+            if (audio.paused) {
+                audio.play();
+                toggleBtn.classList.add("pause");
+            } else {
+                audio.pause();
+                toggleBtn.classList.remove("pause");
+            }
+        });
+    </script>
+</body>
+
+</html>
